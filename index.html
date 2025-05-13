@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "X2Q1yhKY4zmeaL3q4",
+        });
+    })();
+    </script>
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- Header/Navigation -->
@@ -560,17 +571,18 @@
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" placeholder="Subject">
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
                         </div>
                         <div class="form-group">
-                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
+                        <!-- Removed inline onclick. JavaScript will handle form submission -->
                         <button type="submit" class="btn-primary">Send Message</button>
                     </form>
                 </div>
@@ -598,13 +610,5 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-    (function(){
-        emailjs.init("X2Q1yhKY4zmeaL3q4"); // Replace with your actual public key from EmailJS
-    })();
-    </script>
-    <script src="script.js"></script>
 </body>
 </html>
