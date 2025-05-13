@@ -84,6 +84,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+// function send_mail(event) {
+//     event.preventDefault(); // ✅ Prevent form from reloading the page
+
+//     let params = {
+//         name: document.getElementById("name").value,
+//         email: document.getElementById("email").value,
+//         subject: document.getElementById("subject").value,
+//         message: document.getElementById("message").value,
+//     };
+
+//     emailjs.send("service_bvmiw4j", "template_niep7a9", params)
+//         .then(() => {
+//             alert("Email Sent!");
+//             document.getElementById("contactForm").reset(); // ✅ Clear form
+//         })
+//         .catch((error) => {
+//             console.error("Failed to send email:", error);
+//             alert("Something went wrong. Please try again.");
+//         });
+// }
+
     
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
@@ -93,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
           e.preventDefault();
 
           // Send email using EmailJS
-          emailjs.send("service_yjgca23", "template_b16voo2", {
+          emailjs.send("service_bvmiw4j", "template_6yapvqj", {
               from_name: document.getElementById('name').value,
               from_email: document.getElementById('email').value,
               subject: document.getElementById('subject').value,
